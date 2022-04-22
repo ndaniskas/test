@@ -1,12 +1,11 @@
 name: github-action-merge
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - main
 
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
+  release:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
