@@ -23,3 +23,4 @@ jobs:
           release_name: Release ${{ steps.git_version.outputs.VERSION }}
           draft: false
           prerelease: false
+          release-branch: main
